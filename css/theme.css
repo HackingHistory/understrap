@@ -9416,6 +9416,14 @@ a.skip-link {
 .gallery-caption {
   display: block; }
 
+h1 {
+  color: #eeeeee;
+  font-size: 44px; }
+
+h2 {
+  color: #eeeeee;
+  font-size: 37px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
