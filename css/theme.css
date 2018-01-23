@@ -9521,6 +9521,16 @@ a.skip-link {
 #navbarNavDropdown {
   justify-content: flex-end; }
 
+.admin-bar .fixed-top {
+  top: 32px; }
+
+@media screen and (max-width: 782px) {
+  .admin-bar .fixed-top {
+    top: 46px; } }
+
+.admin-bar #content {
+  padding-top: 32px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
