@@ -61,7 +61,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 <div class="card-deck">
 
 	<div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Card 1</h5>
       <p class="card-text">This is a longer card with additional content. This content is a little bit longer.</p>
@@ -70,7 +70,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
   </div>
 
 	<div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Card 2</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -79,7 +79,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
   </div>
 
 	<div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
+    <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Card 3</h5>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
