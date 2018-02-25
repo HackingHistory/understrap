@@ -9531,6 +9531,9 @@ a.skip-link {
 #content {
   padding-top: 32px; }
 
+.card {
+  width: 120px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
