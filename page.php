@@ -58,6 +58,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 </div><!-- Wrapper end -->
 
+
 <div class="card-deck">
 
 	<div class="card">

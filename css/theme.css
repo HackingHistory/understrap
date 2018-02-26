@@ -9534,6 +9534,14 @@ a.skip-link {
 .card {
   width: 120px; }
 
+#wrapper-footer {
+  padding: 0; }
+
+.card-deck {
+  flex-flow: row wrap;
+  margin-right: 15px;
+  margin-left: 15px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
