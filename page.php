@@ -61,6 +61,23 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="card-deck">
 
+	<?php
+
+	$args = array(
+   'post_type' => 'post',
+   'orderby'   => 'rand',
+   'posts_per_page' => 3,
+   );
+
+	 $the_query = new WP_Query( $args );
+
+	 if ($the_query->have_posts() ) {
+		 while ($the_query->have_posts() ) {
+		          $the_query->the_post();
+
+
+	?>
+
 	<div class="card">
     <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
     <div class="card-body">
@@ -70,24 +87,13 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
     </div>
   </div>
 
-	<div class="card">
-    <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card 2</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+	<?php
 
-	<div class="card">
-    <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card 3</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+		}
+	} else {print("no posts oops");}
+	?>
 
 </div>
+
 
 <?php get_footer(); ?>
