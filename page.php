@@ -32,7 +32,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-				
+
 					<!-- // If comments are open or we have at least one comment, load up the comment template.
 					// if ( comments_open() || get_comments_number() ) :
 					// 	comments_template();
@@ -83,7 +83,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
     <div class="card-body">
       <h5 class="card-title">Card 1</h5>
       <p class="card-text">This is a longer card with additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="#" class="btn btn-primary">Go</a>
     </div>
   </div>
 
