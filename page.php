@@ -75,17 +75,16 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		 while ($the_query->have_posts() ) {
 		          $the_query->the_post();
 
-
-	?>
+			?>
 
 	<div class="card">
-    <img class="card-img-top" src="http://2.bp.blogspot.com/-Q9wFiQuli2s/TiQ7ekGvhgI/AAAAAAAABqo/noWcMcvvT5E/s400/Mt+kanchenjunga+5.jpg" alt="Card image cap">
+    <?php the_post_thumbnail('medium', ['class' => 'card-img-top'])?>
     <div class="card-body">
-      <h5 class="card-title">Card 1</h5>
-      <p class="card-text">This is a longer card with additional content. This content is a little bit longer.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title"><?php the_title()?></h5>
+      <p class="card-text"><?php the_excerpt()?></p>
     </div>
   </div>
+
 
 	<?php
 
