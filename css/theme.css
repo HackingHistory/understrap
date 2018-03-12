@@ -9565,3 +9565,12 @@ a.skip-link {
   .wpcf7 .wpcf7-validation-errors {
     color: #dc3545;
     border: 1px solid #e9ecef; }
+
+    .admin-bar .fixed-top {
+      top: 32px;
+    }
+    @media screen and (max-width: 782px) {
+      .admin-bar .fixed-top {
+        top: 46px;
+      }
+    }
