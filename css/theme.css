@@ -73,9 +73,9 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: ##a52a2a;
-  text-align:a;
-  background-color: #coral; }
+  color: #212529;
+  text-align: left;
+  background-color: #fff; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -9565,12 +9565,3 @@ a.skip-link {
   .wpcf7 .wpcf7-validation-errors {
     color: #dc3545;
     border: 1px solid #e9ecef; }
-
-    .admin-bar .fixed-top {
-      top: 32px;
-    }
-    @media screen and (max-width: 782px) {
-      .admin-bar .fixed-top {
-        top: 46px;
-      }
-    }
