@@ -25,10 +25,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		    <div class="site-info">
 
-			<?php printf ('Powered by KCC') ?>
-
-      <span class="sep">  </span>
-
 
 		    </div><!-- .site-info -->
 

@@ -14,6 +14,20 @@
  }
 }
 
-.admin-bar #content {
+#content {
   padding-top: 32px;
+}
+
+.card {
+	width: 120px;
+}
+
+#wrapper-footer {
+	padding: 0;
+}
+
+.card-deck {
+    flex-flow: row wrap;
+    margin-right: 15px;
+    margin-left: 15px;
 }

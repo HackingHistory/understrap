@@ -56,6 +56,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php endif; ?>
 
+				<?php
+				    echo "<img src='https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/2/005/012/18f/0283407.jpg' />";
+				?>
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
