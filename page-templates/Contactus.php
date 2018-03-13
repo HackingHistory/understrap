@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: TESTTEST TEMPLATE
+ * Template Name: Contact 
  *
- * Template for displaying a blank page.
+ * Template for displaying a Contact us
  *
  * @package understrap
  */
