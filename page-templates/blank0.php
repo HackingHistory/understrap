@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blank Page Template
+ * Template Name: TESTTEST TEMPLATE
  *
  * Template for displaying a blank page.
  *
