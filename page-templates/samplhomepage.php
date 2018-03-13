@@ -1,15 +1,13 @@
 <?php
 /**
- * Template Name: WOW template
+ * Template Name: WOW Template
  *
- * Template for displaying a page just with the header and footer area and a "naked" content area in between.
- * Good for landingpages and other types of pages where you want to add a lot of custom markup.
+ * Dual column page template. The left side image is the post's featured image.
+ * Uses Bootstrap's 4 flexbox utilities.
  *
  * @package understrap
  */
-
-
-
+ 
 global $wp_query;
 $id           = $wp_query->post->ID;
 $page_content = get_post($id);
