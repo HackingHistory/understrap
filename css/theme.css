@@ -9522,7 +9522,7 @@ a.skip-link {
   justify-content: flex-end; }
 
 .admin-bar .fixed-top {
-  top: 32px; }
+  top: 320px; }
 
 @media screen and (max-width: 782px) {
   .admin-bar .fixed-top {
