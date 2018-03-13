@@ -71,3 +71,9 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
+
+
+/**
+ * Load Hacking History functions written for KCC
+ */
+require get_template_directory() . '/inc/hackinghistory.php';

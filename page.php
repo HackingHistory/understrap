@@ -32,7 +32,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-
+				  <?php understrap_show_cards(); ?>
 					<!-- // If comments are open or we have at least one comment, load up the comment template.
 					// if ( comments_open() || get_comments_number() ) :
 					// 	comments_template();
@@ -57,42 +57,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
-
-
-<div class="card-deck">
-
-	<?php
-
-	$args = array(
-   'post_type' => 'post',
-   'orderby'   => 'rand',
-   'posts_per_page' => 3,
-   );
-
-	 $the_query = new WP_Query( $args );
-
-	 if ($the_query->have_posts() ) {
-		 while ($the_query->have_posts() ) {
-		          $the_query->the_post();
-
-			?>
-
-	<div class="card">
-    <?php the_post_thumbnail('medium', ['class' => 'card-img-top'])?>
-    <div class="card-body">
-      <h5 class="card-title"><?php the_title()?></h5>
-      <p class="card-text"><?php the_excerpt()?></p>
-    </div>
-  </div>
-
-
-	<?php
-
-		}
-	} else {print("no posts oops");}
-	?>
-
-</div>
-
 
 <?php get_footer(); ?>
