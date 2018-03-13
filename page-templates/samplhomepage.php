@@ -8,21 +8,8 @@
  * @package understrap
  */
 
-get_header();
 
-while ( have_posts() ) : the_post();
-	get_template_part( 'loop-templates/content', 'empty' );
-endwhile;
 
-<?php
-/**
- * Template Name: Dual Column Landing Page
- *
- * Dual column page template. The left side image is the post's featured image.
- * Uses Bootstrap's 4 flexbox utilities.
- *
- * @package understrap
- */
 global $wp_query;
 $id           = $wp_query->post->ID;
 $page_content = get_post($id);
