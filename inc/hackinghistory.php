@@ -22,7 +22,7 @@ function understrap_show_cards() {
 
     /* set up the query */
     $args = array(
-        'post_type' => 'post',
+        'post_type' => 'page',
         'orderby'   => 'rand',
         'posts_per_page' => 3,
     );
