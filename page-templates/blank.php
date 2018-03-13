@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Contact 
+ * Template Name: Blank Page Template
  *
- * Template for displaying a Contact us
+ * Template for displaying a blank page.
  *
  * @package understrap
  */
