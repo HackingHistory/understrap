@@ -67,5 +67,3 @@ if ((have_posts())) {
 </body>
 
 </html>
-
-get_footer();
