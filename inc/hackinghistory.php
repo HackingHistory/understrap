@@ -22,7 +22,7 @@ function understrap_show_cards() {
 
     /* set up the query */
     $args = array(
-        'post_type' => 'post',
+        'post_type' => 'page',
         'orderby'   => 'rand',
         'posts_per_page' => 3,
     );
@@ -38,10 +38,10 @@ function understrap_show_cards() {
         while ($the_query->have_posts() ) {
             $the_query->the_post();
             $html_out .= $card_open;
-            $html_out .= "      " .  get_the_post_thumbnail(null, 'medium', ['class' => 'card-img-top']);
-            $html_out .= '     <div class="card-body">' . "\n         " . '<h5 class="card-title">' ;
+            $html_out .= "      " . get_the_post_thumbnail(null, 'medium', ['class' => 'card-img']);
+            $html_out .= '     <div class="card-img-overlay">' . "\n         " . '<h5 class="card-title">' ;
             $html_out .= get_the_title() . "/</h5>\n";
-            $html_out .= '<p class="card-test">' . get_the_excerpt() . "</p>\n     </div>";
+            $html_out .= '<p class="card-test">' . wp_trim_words(get_the_excerpt(), "15") . "</p>\n     </div>";
             $html_out .= $card_close;
         }
         $html_out .= "</div>\n";
