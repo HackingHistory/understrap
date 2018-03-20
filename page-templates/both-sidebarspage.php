@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div><!-- #primary -->
 
 			<?php get_sidebar( 'right' ); ?>
-			
+
 		</div><!-- .row -->
 
 	</div><!-- Container end -->
