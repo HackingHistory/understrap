@@ -6,8 +6,6 @@
  */
 add_theme_support( 'post-thumbnails' );
 
-<?php the_post_thumbnail(); ?>
-set_post_thumbnail_size( 50, 50);
 
 /**
  * Theme setup and custom theme supports.
