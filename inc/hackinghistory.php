@@ -40,7 +40,7 @@ function understrap_show_cards() {
             $html_out .= $card_open;
             $html_out .= "      " . get_the_post_thumbnail(null, 'medium', ['class' => 'card-img']);
             $html_out .= '     <div class="card-img-overlay">' . "\n         " . '<h5 class="card-title">' ;
-            $html_out .= get_the_title() . "/</h5>\n";
+            $html_out .= get_the_title() . "</h5>\n";
             $html_out .= '<p class="card-test">' . wp_trim_words(get_the_excerpt(), "15") . "</p>\n     </div>";
             $html_out .= $card_close;
         }
