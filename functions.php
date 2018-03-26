@@ -4,8 +4,7 @@
  *
  * @package understrap
  */
-
-
+add_theme_support( 'post-thumbnails' );
 /**
  * Theme setup and custom theme supports.
  */
