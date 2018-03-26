@@ -13,14 +13,9 @@ if ( has_post_thumbnail() ) {
 the_content();
 
 the_post_thumbnail();
-
-the_post_thumbnail('thumbnail');       // Thumbnail (default 150px x 150px max)
-the_post_thumbnail('medium');          // Medium resolution (default 300px x 300px max)
-the_post_thumbnail('medium_large');    // Medium Large resolution (default 768px x 0px max)
-the_post_thumbnail('large');           // Large resolution (default 1024px x 1024px max)
-the_post_thumbnail('full');            // Original image resolution (unmodified)
-
-the_post_thumbnail( array(100,100) );  // Other resolutions
+the_post_thumbnail('medium');
+the_post_thumbnail( array(100,100) );
+the_post_thumbnail( 'category-thumb' );
 
 
 /**
