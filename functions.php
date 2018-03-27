@@ -6,8 +6,20 @@
  */
 add_theme_support( 'post-thumbnails' );
 
+// check if the post has a Post Thumbnail assigned to it.
+if ( has_post_thumbnail() ) {
+	the_post_thumbnail();
+}
+the_content();
+
+the_post_thumbnail();
+the_post_thumbnail('medium');
+the_post_thumbnail( array(100,100) );
+the_post_thumbnail( 'category-thumb' );
+
 
 /**
+
  * Theme setup and custom theme supports.
  */
 require get_template_directory() . '/inc/setup.php';
