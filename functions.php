@@ -10,12 +10,12 @@ add_theme_support( 'post-thumbnails' );
 if ( has_post_thumbnail() ) {
 	the_post_thumbnail();
 }
-the_content();
-
-the_post_thumbnail();
-the_post_thumbnail('medium');
-the_post_thumbnail( array(100,100) );
-the_post_thumbnail( 'category-thumb' );
+  /* the_content();
+   *
+   * the_post_thumbnail();
+   * the_post_thumbnail('medium');
+   * the_post_thumbnail( array(100,100) );
+   * the_post_thumbnail( 'category-thumb' );*/
 
 
 /**
