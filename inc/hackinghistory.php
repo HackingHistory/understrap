@@ -110,16 +110,16 @@
 
   add_shortcode ('aside', 'understrap_add_aside');
 
-  if ( ! function_exists( 'themename_custom_logo_setup' ) ) :
+  // if ( ! function_exists( 'themename_custom_logo_setup' ) ) :
 
-  function themename_custom_logo_setup() {
-    $defaults = array(
-      'height'      => 50,
-      'width'       => 100,
-      'header-text' => array( 'site-title', 'site-description' ),
-    );
-    add_theme_support( 'custom-logo', $defaults );
-  }
-  endif;
+  // function themename_custom_logo_setup() {
+  //   $defaults = array(
+  //     'height'      => 50,
+  //     'width'       => 100,
+  //     'header-text' => array( 'site-title', 'site-description' ),
+  //   );
+  //   add_theme_support( 'custom-logo', $defaults );
+  // }
+  // endif;
 
-  add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
+  // add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
