@@ -24,25 +24,34 @@
       'post_type' => 'page',
       'orderby'   => 'rand',
       'posts_per_page' => 3,
+      'post__not_in' => array(get_queried_object()->ID)
     );
 
 
     $the_query = new WP_Query( $args );
     /* a variable to hold the output */
     $html_out = "";
-    $card_open = '    <div class="card">' . "\n";
+    $card_open = '    <div class="card" style="width:18rem;">' . "\n";
     $card_close = '    </div>' . "\n";
 
     if ($the_query->have_posts() ) {
-      $html_out .= '<div class="card-deck">';
+      $html_out .= '<div class="card-deck row">';
       while ($the_query->have_posts() ) {
         $the_query->the_post();
+        if ( has_post_thumbnail () ) {
+          $th = "      " . get_the_post_thumbnail(null, 'medium', ['class' => 'card-img']);
+          $bodyclass = 'card-img-overlay';
+        } else {
+          $th = '';
+          $bodyclass = 'card-body';
+        }
         $linkopen = '<a href="' . get_page_link()  . '">';
         $html_out .=   $card_open;
-        $html_out .= "      " . get_the_post_thumbnail(null, 'medium', ['class' => 'card-img']);
-        $html_out .= '     ' . $linkopen . '<div class="card-img-overlay">' . "\n         " . '<h5 class="card-title">' ;
+        $html_out .= $th;
+        $html_out .= '     ' . $linkopen . '<div class="' . $bodyclass . '">' . "\n         " . '<h5 class="card-title">' ;
         $html_out .= get_the_title() . "</h5>\n";
-        $html_out .= '<p class="card-test">' . wp_trim_words(get_the_excerpt(), "15") . "</p>\n     </div></a>";
+        //$html_out .= '<p class="card-text">' . wp_trim_words(get_the_excerpt(), "15") . "</p>\n";
+        $html_out .= "    </div></a>";
         $html_out .= $card_close . '</a>';
       }
       $html_out .= "</div>\n";
@@ -54,28 +63,33 @@
   if (! function_exists( 'understrap_add_aside') ) :
 
   function understrap_add_aside ($atts = [], $content = null) {
-    // just some HTML to generate with the add_aside shorcode
-    // for now let's just try a card
-    if ( isset ($atts['title'] ) ) {
-      $title = '<h5 class="card-title">' . $atts['title'] .  '</h5>';
+
+    $props = shortcode_atts( array(
+      'title' => null,
+      'position' => 'right',
+      'link' => null,
+      'image' => null
+    ), $atts);
+    // $t = props['title'];
+    // $p = props['position'];
+    // $i = props['image'];
+
+    if ( isset ($props['title'] ) ) {
+      $title = '<h5 class="card-title">' . $props['title'] .  '</h5>';
     } else {
       $title = '';
     }
-    if ( isset ($atts['position']) ) {
-      switch ($atts['position'] ) {
-        case 'left':
-          $floatclass = ' float-md-left mr-2';
-          break;
-        case 'right':
-          $floatclass = ' float-md-right ml-2';
-          break;
-        default:
-          $floatclass = '';
-      }
+    switch ($props['position'] ) {
+      case 'left':
+        $floatclass = ' float-md-left mr-2';
+        break;
+      case 'right':
+        $floatclass = ' float-md-right ml-2';
+        break;
+      default:
+        $floatclass = '';
     }
-    else {
-      $floatclass = '';
-    }
+
 
     $output = '<div class="card text-white bg-dark' . $floatclass .  '" style="width: 18rem;">
   <div class="card-body">
