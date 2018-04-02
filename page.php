@@ -32,7 +32,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-				  <?php understrap_show_cards(); ?>
 					<!-- // If comments are open or we have at least one comment, load up the comment template.
 					// if ( comments_open() || get_comments_number() ) :
 					// 	comments_template();
@@ -57,5 +56,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
-
+<?php understrap_show_cards(); ?>
 <?php get_footer(); ?>
