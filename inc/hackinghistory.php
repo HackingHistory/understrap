@@ -26,6 +26,7 @@
       'posts_per_page' => 3,
     );
 
+
     $the_query = new WP_Query( $args );
     /* a variable to hold the output */
     $html_out = "";
@@ -50,6 +51,51 @@
   }
   endif;
 
+  if (! function_exists( 'understrap_add_aside') ) :
+
+  function understrap_add_aside ($atts = [], $content = null) {
+    // just some HTML to generate with the add_aside shorcode
+    // for now let's just try a card
+    if ( isset ($atts['title'] ) ) {
+      $title = '<h5 class="card-title">' . $atts['title'] .  '</h5>';
+    } else {
+      $title = '';
+    }
+    if ( isset ($atts['position']) ) {
+      switch ($atts['position'] ) {
+        case 'left':
+          $floatclass = ' float-md-left mr-2';
+          break;
+        case 'right':
+          $floatclass = ' float-md-right ml-2';
+          break;
+        default:
+          $floatclass = '';
+      }
+    }
+    else {
+      $floatclass = '';
+    }
+
+    $output = '<div class="card text-white bg-dark' . $floatclass .  '" style="width: 18rem;">
+  <div class="card-body">
+    ' . $title . '
+    <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+    <div class="card-text">' . $content .  '</div>
+    <!--
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+    -->
+    </div>
+    </div>';
+
+
+    return $output;
+  }
+  endif;
+
+  add_shortcode ('aside', 'understrap_add_aside');
+
   if ( ! function_exists( 'themename_custom_logo_setup' ) ) :
 
   function themename_custom_logo_setup() {
@@ -61,5 +107,7 @@
     add_theme_support( 'custom-logo', $defaults );
   }
   endif;
+
+
 
   add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
