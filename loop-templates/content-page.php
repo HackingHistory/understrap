@@ -8,7 +8,7 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header" style="background-image: url('<?php the_post_thumbnail_url( 'full' );?>')" >
+	<header class="entry-header bg-dark text-white" style="background-image: url('<?php the_post_thumbnail_url( 'full' );?>')" >
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
