@@ -49,6 +49,8 @@
 
 #wrapper-footer-full {
     background-color: #a4b0be !important;
+		padding-top: 0px;
+    padding-bottom: 10px
 }
 
   @include media-breakpoint-up (md) {
