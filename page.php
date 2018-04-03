@@ -52,7 +52,10 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<?php endif; ?>
 
 	</div><!-- .row -->
-  <?php understrap_show_cards(); ?>
+  <?php
+    if (is_front_page () {
+      understrap_show_cards();
+  } ?>
 
 </div><!-- Container end -->
 
