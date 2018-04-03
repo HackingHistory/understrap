@@ -61,10 +61,12 @@
     height: 200px;
     background-size: 100% auto;
     background-position: center;
+    display: flex;
+    align-items: center;
   }
 
   .entry-title {
-    padding: 60px;
+    //padding: 60px;
     //color: white;
     text-shadow: 1px 1px 1px #000;
     font-size: 4rem !important;
@@ -80,7 +82,6 @@
 	color: white;
   text-shadow: 1px 0 black, 0 1px black, 1px 0 black;
 }
-
 .img-fluid {
 //	max-width: 10%;
 	height: auto;
