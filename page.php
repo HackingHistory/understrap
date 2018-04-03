@@ -53,7 +53,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 	</div><!-- .row -->
   <?php
-    if (is_front_page () {
+    if (is_front_page ()) {
       understrap_show_cards();
   } ?>
 
