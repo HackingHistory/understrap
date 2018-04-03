@@ -24,6 +24,7 @@
       'post_type' => 'page',
       'orderby'   => 'rand',
       'posts_per_page' => 3,
+      'meta_query' => array(array('key' => '_thumbnail_id')),
       'post__not_in' => array(get_queried_object()->ID)
     );
 
